@@ -10,8 +10,8 @@ def app(request):
 
 def test_login(app):
   app.open_home_page()
-  app.login( group(username="admin", password="12345678"))
+  app.session.login( group(username="admin", password="12345678"))
   app.open_dashboard_page()
   app.open_cards_page()
   app.open_users_dropdown()
-  app.logout()
+  app.session.logout()
